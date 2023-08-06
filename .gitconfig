@@ -1,0 +1,9 @@
+[user]
+	email = ${GIT_EMAIL}
+	name = Paulo Alvares
+[pull]
+	rebase = false
+[core]
+	editor = vim
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

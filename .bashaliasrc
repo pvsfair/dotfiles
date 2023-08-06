@@ -1,0 +1,42 @@
+function sourcefile(){
+	source $1
+	echo "sourced '$1' file"
+}
+function editandsource(){
+	vim $1
+	sourcefile $1
+}
+alias esfile="editandsource"
+function salias(){
+	sourcefile ~/.bashaliasrc
+}
+
+function ebash(){
+	editandsource ~/.bashrc
+}
+function evim(){
+	vim ~/.vimrc
+}
+function sbash(){
+	sourcefile ~/.bashrc
+}
+
+function ealias(){
+	editandsource ~/.bashaliasrc
+}
+
+# Directory aliases
+alias ..="cd .."
+alias cd..="cd .."
+
+# Fuck aliases
+eval $(thefuck --alias)
+alias damn="fuck"
+
+# docker compose alias
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcdf="docker compose down -v --remove-orphans"
+
+alias mvnquarkus="mvn clean quarkus:dev -P.env"
+
