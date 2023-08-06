@@ -10,4 +10,4 @@ The idea of this repo is to auto setup a new distro with all the little things I
 # List of files directly synced to this repo
 - 
 
-# List of 
+# How to setup
