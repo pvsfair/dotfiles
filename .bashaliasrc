@@ -8,21 +8,22 @@ function editandsource(){
 }
 alias esfile="editandsource"
 function salias(){
-	sourcefile ~/.bashaliasrc
+	sourcefile $DOTFILES_PATH/.bashaliasrc
 }
-
 function ebash(){
-	editandsource ~/.bashrc
+	editandsource $DOTFILES_PATH/.bashrc
 }
 function evim(){
 	vim ~/.vimrc
 }
 function sbash(){
-	sourcefile ~/.bashrc
+	sourcefile $DOTFILES_PATH/.bashrc
 }
-
 function ealias(){
-	editandsource ~/.bashaliasrc
+	editandsource $DOTFILES_PATH/.bashaliasrc
+}
+function shomebash(){
+	sourcefile ~/.bashrc
 }
 
 # Directory aliases
@@ -30,13 +31,18 @@ alias ..="cd .."
 alias cd..="cd .."
 
 # Fuck aliases
-eval $(thefuck --alias)
-alias damn="fuck"
+if command -v thefuck &> /dev/null; then
+    eval $(thefuck --alias)
+    alias damn="fuck"
+fi
 
 # docker compose alias
-alias dcu="docker compose up"
-alias dcd="docker compose down"
-alias dcdf="docker compose down -v --remove-orphans"
+if command -v docker &> /dev/null; then
+	alias dcu="docker compose up"
+	alias dcd="docker compose down"
+	alias dcdf="docker compose down -v --remove-orphans"
+fi
 
-alias mvnquarkus="mvn clean quarkus:dev -P.env"
-
+if command -v mvn &> /dev/null; then
+	alias mvnquarkus="mvn clean quarkus:dev -P.env"
+fi
