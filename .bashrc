@@ -15,7 +15,9 @@ fi
 unset color_prompt
 
 # check what this do
-# source /usr/share/doc/fzf/examples/key-bindings.bash
+if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+  source /usr/share/doc/fzf/examples/key-bindings.bash
+fi
 
 #GO ENVS
 # export GOPRIVATE="bitbucket.org/gofrank"

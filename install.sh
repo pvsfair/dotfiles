@@ -57,6 +57,30 @@ if ! command -v jq &> /dev/null; then
 fi
 echo "JQ version => $(jq --version)"
 
+# installing fzf
+if ! command -v fzf &> /dev/null; then
+  echo 'Installing fzf'
+  sudo apt install fzf -y
+fi
+echo "fzf version => $(fzf --version)"
+
+# installing python
+if ! command -v python3 &> /dev/null; then
+  echo 'Installing python3'
+  sudo apt update
+  sudo apt install python3-dev python3-pip python3-setuptools -y
+  pip3 install thefuck --user
+fi
+echo "python3 version => $(python3 --version)"
+
+# installing fuck
+if ! command -v fuck &> /dev/null; then
+  echo 'Installing fuck'
+  pip3 install thefuck --user
+fi
+eval "$(thefuck --alias)"
+echo "the-fuck version => $(fuck --version)"
+
 if [ -z ${NVM_DIR} ]; then
   nvmLatestVersion=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | jq -r '.tag_name')
   echo "Installing nvm on version: $nvmLatestVersion"

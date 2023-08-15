@@ -23,8 +23,11 @@ source ~/.bashrc
 # List of apps installed 
 
 - fzf
-- the_fuck
-- 
+- fuck
+- JQ
+- python3
+- nvm
+- node
 
 # List of files directly synced to this repo
 
