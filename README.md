@@ -22,6 +22,7 @@ source ~/.bashrc
 
 # List of apps installed 
 
+- net-tools
 - fzf
 - fuck
 - JQ

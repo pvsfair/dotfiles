@@ -50,6 +50,13 @@ else
   echo "Please copy the .env-default file and input the sensitive data there."
 fi
 
+# installing net-tools
+if ! command -v ifconfig &> /dev/null; then
+  echo 'Installing net-tools'
+  sudo apt install net-tools -y
+fi
+echo "net-tools version => $(ifconfig --version)"
+
 # installing jq
 if ! command -v jq &> /dev/null; then
   echo 'Installing jq'

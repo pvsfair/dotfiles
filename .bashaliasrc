@@ -46,3 +46,6 @@ fi
 if command -v mvn &> /dev/null; then
 	alias mvnquarkus="mvn clean quarkus:dev -P.env"
 fi
+
+# open dotfiles with VSCode
+alias dotfiles="code $DOTFILES_PATH"
