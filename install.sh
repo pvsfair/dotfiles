@@ -133,4 +133,6 @@ fi
 
 echo "Node version => $(node --version)"
 
+sh ./install_nvim.sh
+
 echo "bye"
