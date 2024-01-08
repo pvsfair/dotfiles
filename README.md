@@ -22,6 +22,7 @@ source ~/.bashrc
 
 # List of apps installed 
 
+- git
 - net-tools
 - fzf
 - fuck
@@ -29,9 +30,21 @@ source ~/.bashrc
 - python3
 - nvm
 - node
+- nvim
 
 # List of files directly synced to this repo
 
-- 
+- nvim config ($HOME/.config/nvim -> $DOTFILES_PATH/nvim)
+- .bashaliasrc
+- .bashrc
+- .bashexportsrc
 
 # How to setup
+
+- Clone the repo
+- Create `.env` file and input the data there 
+  - Can be based on `.env-default` file
+- Run `install.sh`
+- Either:
+  - Restart current terminal window
+  - Run `source ~/.bashrc`

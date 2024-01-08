@@ -57,6 +57,12 @@ else
   echo "Please copy the .env-default file and input the sensitive data there."
 fi
 
+if ! command -v git &> /dev/null; then
+  echo 'Installing git'
+  sudo apt install git -y
+fi
+echo "git version => $(git --version)"
+
 # installing net-tools
 if ! command -v ifconfig &> /dev/null; then
   echo 'Installing net-tools'
