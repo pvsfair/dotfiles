@@ -1,2 +1,4 @@
 .env
 *.bkp
+lazy-lock.json
+.luarc.json

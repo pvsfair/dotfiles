@@ -3,27 +3,38 @@ function sourcefile(){
 	echo "sourced '$1' file"
 }
 function editandsource(){
-	vim $1
+	nvim $1
 	sourcefile $1
 }
 alias esfile="editandsource"
 function salias(){
-	sourcefile $DOTFILES_PATH/.bashaliasrc
+	sourcefile ~/.bashaliasrc
 }
+
 function ebash(){
-	editandsource $DOTFILES_PATH/.bashrc
+	editandsource ~/.bashrc
 }
 function evim(){
-	vim ~/.vimrc
+	nvim ~/.vimrc
+}
+function envim(){
+  nvimfolder ~/.config/nvim
+}
+function ei3(){
+  nvim ~/.config/i3/config
+}
+function nvimfolder(){
+  DIRECTORY=$(pwd)
+  cd $1
+  nvim
+  cd $DIRECTORY
 }
 function sbash(){
-	sourcefile $DOTFILES_PATH/.bashrc
-}
-function ealias(){
-	editandsource $DOTFILES_PATH/.bashaliasrc
-}
-function shomebash(){
 	sourcefile ~/.bashrc
+}
+
+function ealias(){
+	editandsource ~/.bashaliasrc
 }
 
 # Directory aliases
@@ -31,21 +42,36 @@ alias ..="cd .."
 alias cd..="cd .."
 
 # Fuck aliases
-if command -v thefuck &> /dev/null; then
-    eval $(thefuck --alias)
-    alias damn="fuck"
-fi
+eval $(thefuck --alias)
+alias damn="fuck"
 
 # docker compose alias
-if command -v docker &> /dev/null; then
-	alias dcu="docker compose up"
-	alias dcd="docker compose down"
-	alias dcdf="docker compose down -v --remove-orphans"
-fi
+alias dcu="docker compose up"
+alias dcub="docker compose up --build"
+alias dcd="docker compose down"
+alias dcdf="docker compose down -v --remove-orphans"
 
-if command -v mvn &> /dev/null; then
-	alias mvnquarkus="mvn clean quarkus:dev -P.env"
-fi
+# mvn alias
+alias mvnquarkus="mvn clean quarkus:dev -P.env"
 
-# open dotfiles with VSCode
-alias dotfiles="code $DOTFILES_PATH"
+# xclip alias (clipboard)
+alias xc="xclip -selection clipboard"
+
+# did not work as expected
+#function xc(){
+#	sh $1 | xclip -selection clipboard
+#}
+
+alias k9s="k9s-nsg"
+alias k9s-cluster-tools="k9s-nsg --kubeconfig ~/.kube/configThLiveToolsProd"
+alias k9s-eu-broker="k9s-nsg --kubeconfig ~/.kube/configeubrokermasterblaster"
+alias k9s-staging="k9s-nsg --kubeconfig ~/.kube/configstagmaster"
+
+alias watcher="ag -l | entr -rc"
+
+alias upbg="python3 /home/pvsfair/dev/changedesktop/changeDesktopDay.py"
+
+alias lg="lazygit"
+alias monitorDualLeft="xrandr --output HDMI1 --auto --left-of eDP1"
+alias monitorSingle="xrandr --auto"
+

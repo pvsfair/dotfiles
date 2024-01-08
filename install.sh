@@ -1,28 +1,35 @@
 #!/usr/bin/env bash
+# check if .env file exists
+if [ ! -f .env ]; then
+  echo ".env file does not exist. Please create it and set the sensitive data."
+  exit 1
+fi
 
+# true if DOTFILES_PATH is not set
 if [ -z ${DOTFILES_PATH} ]; then
   echo "setting up bash and aliases"
   
-  function addstuff(){
+  function source_file(){
       echo "
   if [ -f \$DOTFILES_PATH/$1 ]; then
       . \$DOTFILES_PATH/$1
   fi" >> ~/.bashrc
   }
 
-  # add this folder path to a var
+  # add dotfiles folder path to a var
   echo "export DOTFILES_PATH=$PWD" >> ~/.bashrc
 
   # add source of files on bashrc
 
-  addstuff .bashaliasrc
-  addstuff .bashexportsrc
-  addstuff .bashrc
+  source_file .bashaliasrc
+  source_file .bashexportsrc
+  source_file .bashrc
 
   # source ~/.bashrc
   echo "Please Restart you terminal for the changes to take effect. Or you can run `source ~/.bashrc`"
   
 fi
+
 if [ -f .env ]; then
   echo "Reading, now your sensitive data from .env file. (please does not includes the bank acount #, neither you password for fort knox)"
   set -o allexport
@@ -112,6 +119,16 @@ if ! [ -z ${NVM_DIR} ]; then
     nodeVersionInstalled=$(nvm --version)
     echo "Node version $nodeVersionInstalled installed"
   fi
+fi
+
+if ! command -v rg &> /dev/null; then
+  echo 'Installing ripgrep'
+  sudo apt install ripgrep
+fi
+
+if ! command -v fd &> /dev/null; then
+  echo 'Installing fd'
+  sudo apt install fd-find
 fi
 
 echo "Node version => $(node --version)"
