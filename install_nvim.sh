@@ -8,7 +8,7 @@ case $yn in
 esac
 
 if ! command -v nvim &> /dev/null; then
-  echo 'Installing fuck'
+  echo 'Installing nvim'
   sudo snap install nvim --classic
 fi
 echo "nvim version $(nvim --version)"
