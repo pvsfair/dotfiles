@@ -5,6 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
+    "3rd/image.nvim",
   },
   keys = {
     { "<C-b>", ":Neotree filesystem reveal left<CR>", desc = "NeoTree open" }

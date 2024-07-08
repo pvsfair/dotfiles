@@ -27,8 +27,10 @@ vim.cmd("vnoremap <A-k> :m '<-2<CR>gv=gv")
 -- vim.cmd('inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"')
 
 -- vim.keymap.set('i', '<Tab>', function() print(require('cmp').visible()) end, {expr=true})
-vim.keymap.set('i', "<Tab>", function() return require('cmp').visible() and '<C-n>' or '<Tab>' end, {silent = true, expr = true})
-vim.keymap.set('i', "<S-Tab>", function() return require('cmp').visible() and '<C-p>' or '<C-h>' end, {expr = true})
+-- vim.keymap.set('i', "<Tab>", function() return require('cmp').visible() and '<C-n>' or '<Tab>' end, {silent = true, expr = true})
+-- vim.keymap.set('i', "<S-Tab>", function() return require('cmp').visible() and '<C-p>' or '<C-h>' end, {expr = true})
+vim.keymap.set('i', "jk", "<ESC>")
+vim.keymap.set('i', "<CapsLock>", "<ESC>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })

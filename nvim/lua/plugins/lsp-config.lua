@@ -210,7 +210,7 @@ return {
       }
       lspconfig.jdtls.setup(config)
     end,
-    ft = { 'java' },
+    -- ft = { 'java' },
     keys = {
       { '<leader>sr', function() require('toggleterm').exec("mvn clean quarkus:dev -P.env") end, desc = "Run maven clean quarkus" },
       { '<leader>oi', function() require("jdtls").organize_imports() end, desc = "Organize imports" },
@@ -222,6 +222,7 @@ return {
       { '<space>ca', vim.lsp.buf.code_action, mode = { 'n', 'v' }, desc = "Code action" },
       { '<C-k>', vim.lsp.buf.signature_help, desc = "Signature help" },
       { '<space>rn', vim.lsp.buf.rename, desc = "Rename" },
+      { '<space>e', function() vim.diagnostic.open_float(0, {scope="line"}) end, desc = "Show Diagnostic" },
     }
   },
   {

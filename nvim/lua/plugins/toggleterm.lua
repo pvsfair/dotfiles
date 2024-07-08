@@ -10,6 +10,7 @@ return {
       end,
       keys = {
         { '<leader>cm', function() require("toggleterm").toggle() end, desc = "Toggle terminal" },
+        { '<leader>cm', function() require("toggleterm").toggle() end, mode = 't', desc = "Toggle terminal" },
         { '<esc>', [[<C-\><C-n>]], mode = 't', desc = "Escape terminal" },
       }
     }
