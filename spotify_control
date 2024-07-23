@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+# Simple Spotify Control
+# Just call ./spotify_control --help
+
+CMD="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player"
+GETVOL="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Volume"
+SETVOL="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Set string:org.mpris.MediaPlayer2.Player string:Volume variant:double:"
+
+VAMT=${2:-0.1}
+
+case "$1" in
+  "playpause" )
+    ${CMD}.PlayPause
+    exit $?
+  ;;
+  "next" )
+    ${CMD}.Next
+    exit $?
+  ;;
+  "previous" )
+    ${CMD}.Previous
+    exit $?
+  ;;
+  "stop" )
+    ${CMD}.Stop
+    exit $?
+  ;;
+  "play" )
+    ${CMD}.Play
+    exit $?
+  ;;
+  "vup" )
+    VOL=$(${GETVOL} | tr -d '\r\n' | awk '{n=split($0,A," "); print(A[n])}')
+    VOL=$(echo $VOL + $VAMT | bc)
+    ${SETVOL}$VOL
+    exit $?
+  ;;
+  "vdown")
+    VOL=$(${GETVOL} | tr -d '\r\n' | awk '{n=split($0,A," "); print(A[n])}')
+    VOL=$(echo $VOL - $VAMT | bc)
+    ${SETVOL}$VOL
+    exit $?
+  ;;
+  "vget" )
+    # CC="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Set string:org.mpris.MediaPlayer2.Player string:Volume variant:double:0.453"
+    ${GETVOL} | tr -d '\r\n' | awk '{n=split($0,A," "); print(A[n])}'
+    exit $?
+  ;;
+  "getName" )
+    MUSIC=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | awk '/title/ {getline; print $0 }' | awk -F'"' '{ print $2 }')
+    ARTIST=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | awk '/artist/ {getline; getline; print $0 }' | awk -F'"' '{ print $2 }')
+    echo $MUSIC - $ARTIST
+  ;;
+  *)
+    echo "Usage: $0 [command]"
+    echo "  commands are: playpause, next, previous, stop, play, vup, vdown, vget"
+    exit 1
+  ;;
+esac
+
