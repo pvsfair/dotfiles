@@ -50,39 +50,43 @@ def get_temperature_status():
     secs = datetime.datetime.now().second
     if secs >= 5:
         return {"full_text": read_from_file(), "name": "temp"}
-    # covilha
-    r = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=40.267148&lon=-7.5164369&appid=57210b8c5a36e6a88383e8ae9716f8d6&lang=pt_br&units=metric")
-    # porto office
-    # r = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=41.1534365&lon=-8.6083718&appid=57210b8c5a36e6a88383e8ae9716f8d6&lang=pt_br&units=metric")
-    if r.status_code != 200:
-        return {"full_text": "🌡️FAIL", "name": "temp"}
-    data = r.json()
-    temp = data["main"]["temp"]
-    feels_like = data["main"]["feels_like"]
-    icon_name = data["weather"][0]["icon"][:2]
-    text = data["weather"][0]["description"]
-    icon = ""
-    if icon_name == "01":
-        icon = "☀️"
-    elif icon_name == "02":
-        icon = "⛅"
-    elif icon_name == "03":
-        icon = "☁️"
-    elif icon_name == "04":
-        icon = "☁️"
-    elif icon_name == "09":
-        icon = "🌧️"
-    elif icon_name == "10":
-        icon = "🌦️"
-    elif icon_name == "11":
-        icon = "🌩️"
-    elif icon_name == "13":
-        icon = "❄️"
-    elif icon_name == "50":
-        icon = "🌫️"
-    t = f"{icon} {str(temp)}°C ({str(feels_like)}°C)"
-    save_to_file(t)
-    return {"full_text": f"{t}", "name": "temp"}
+    try:
+        # covilha
+        r = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=40.267148&lon=-7.5164369&appid=57210b8c5a36e6a88383e8ae9716f8d6&lang=pt_br&units=metric")
+        # porto office
+        # r = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=41.1534365&lon=-8.6083718&appid=57210b8c5a36e6a88383e8ae9716f8d6&lang=pt_br&units=metric")
+        if r.status_code != 200:
+            return {"full_text": "🌡️FAIL", "name": "temp"}
+        data = r.json()
+        temp = data["main"]["temp"]
+        feels_like = data["main"]["feels_like"]
+        icon_name = data["weather"][0]["icon"][:2]
+        text = data["weather"][0]["description"]
+        icon = ""
+        if icon_name == "01":
+            icon = "☀️"
+        elif icon_name == "02":
+            icon = "⛅"
+        elif icon_name == "03":
+            icon = "☁️"
+        elif icon_name == "04":
+            icon = "☁️"
+        elif icon_name == "09":
+            icon = "🌧️"
+        elif icon_name == "10":
+            icon = "🌦️"
+        elif icon_name == "11":
+            icon = "🌩️"
+        elif icon_name == "13":
+            icon = "❄️"
+        elif icon_name == "50":
+            icon = "🌫️"
+        t = f"{icon} {str(temp)}°C ({str(feels_like)}°C)"
+        save_to_file(t)
+        return {"full_text": f"{t}", "name": "temp"}
+    except:
+        return {"full_text": read_from_file(), "name": "temp"}
+        # return "🌡️⟳"
 
 def save_to_file(str):
     with open("/tmp/i3statusWrapperTemp.txt", "w") as f:
@@ -96,13 +100,13 @@ def read_from_file():
         return "🌡️⟳"
 
 def music():
-    # return "music"
-    # battery = subprocess.run(f"upower -i {headset} | grep percentage | awk '{{print $2}}'", shell=True, capture_output=True).stdout.decode("utf-8").strip()
-    music_name = subprocess.run("$HOME/spotify_control getName", shell=True, capture_output=True).stdout.decode("utf-8").strip()
-    volume = subprocess.run("$HOME/spotify_control vget", shell=True, capture_output=True).stdout.decode("utf-8").strip()
-    volume = int(float(volume)*100)
-    return "{} 🎵{}%".format(music_name, volume)
-
+    try:
+        music_name = subprocess.run("$HOME/spotify_control getName", shell=True, capture_output=True).stdout.decode("utf-8").strip()
+        volume = subprocess.run("$HOME/spotify_control vget", shell=True, capture_output=True).stdout.decode("utf-8").strip()
+        volume = int(float(volume)*100)
+        return "{} 🎵{}%".format(music_name, volume)
+    except:
+        return "Spotify Closed"
 
 def print_line(message):
     """ Non-buffered printing to stdout. """
