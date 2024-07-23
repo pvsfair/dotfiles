@@ -1,0 +1,168 @@
+
+(nitrogen:1288115): GLib-GObject-CRITICAL **: 16:24:02.130: Attempting to freeze the notification queue for object GtkSettings[0x55d7d0e451f0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288115): GLib-GObject-CRITICAL **: 16:24:02.130: Attempting to thaw the notification queue for object GtkSettings[0x55d7d0e451f0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288117): GLib-GObject-CRITICAL **: 16:24:02.273: Attempting to freeze the notification queue for object GtkSettings[0x5636d14692d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288117): GLib-GObject-CRITICAL **: 16:24:02.273: Attempting to thaw the notification queue for object GtkSettings[0x5636d14692d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288141): GLib-GObject-CRITICAL **: 16:25:01.447: Attempting to freeze the notification queue for object GtkSettings[0x5569bdd08f00]; Property notification does not work during instance finalization.
+
+(nitrogen:1288141): GLib-GObject-CRITICAL **: 16:25:01.448: Attempting to thaw the notification queue for object GtkSettings[0x5569bdd08f00]; Property notification does not work during instance finalization.
+
+(nitrogen:1288143): GLib-GObject-CRITICAL **: 16:25:01.588: Attempting to freeze the notification queue for object GtkSettings[0x558d7a83c090]; Property notification does not work during instance finalization.
+
+(nitrogen:1288143): GLib-GObject-CRITICAL **: 16:25:01.588: Attempting to thaw the notification queue for object GtkSettings[0x558d7a83c090]; Property notification does not work during instance finalization.
+
+(nitrogen:1288166): GLib-GObject-CRITICAL **: 16:26:01.771: Attempting to freeze the notification queue for object GtkSettings[0x55f6be73ac70]; Property notification does not work during instance finalization.
+
+(nitrogen:1288166): GLib-GObject-CRITICAL **: 16:26:01.771: Attempting to thaw the notification queue for object GtkSettings[0x55f6be73ac70]; Property notification does not work during instance finalization.
+
+(nitrogen:1288168): GLib-GObject-CRITICAL **: 16:26:01.923: Attempting to freeze the notification queue for object GtkSettings[0x55972c2b1e60]; Property notification does not work during instance finalization.
+
+(nitrogen:1288168): GLib-GObject-CRITICAL **: 16:26:01.923: Attempting to thaw the notification queue for object GtkSettings[0x55972c2b1e60]; Property notification does not work during instance finalization.
+
+(nitrogen:1288224): GLib-GObject-CRITICAL **: 16:27:02.099: Attempting to freeze the notification queue for object GtkSettings[0x5571b3893170]; Property notification does not work during instance finalization.
+
+(nitrogen:1288224): GLib-GObject-CRITICAL **: 16:27:02.099: Attempting to thaw the notification queue for object GtkSettings[0x5571b3893170]; Property notification does not work during instance finalization.
+
+(nitrogen:1288226): GLib-GObject-CRITICAL **: 16:27:02.241: Attempting to freeze the notification queue for object GtkSettings[0x555b3a455130]; Property notification does not work during instance finalization.
+
+(nitrogen:1288226): GLib-GObject-CRITICAL **: 16:27:02.241: Attempting to thaw the notification queue for object GtkSettings[0x555b3a455130]; Property notification does not work during instance finalization.
+
+(nitrogen:1288253): GLib-GObject-CRITICAL **: 16:28:01.413: Attempting to freeze the notification queue for object GtkSettings[0x562f851c4fc0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288253): GLib-GObject-CRITICAL **: 16:28:01.413: Attempting to thaw the notification queue for object GtkSettings[0x562f851c4fc0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288255): GLib-GObject-CRITICAL **: 16:28:01.559: Attempting to freeze the notification queue for object GtkSettings[0x5596ae2ef0d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288255): GLib-GObject-CRITICAL **: 16:28:01.559: Attempting to thaw the notification queue for object GtkSettings[0x5596ae2ef0d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288301): GLib-GObject-CRITICAL **: 16:29:01.738: Attempting to freeze the notification queue for object GtkSettings[0x556fe107c220]; Property notification does not work during instance finalization.
+
+(nitrogen:1288301): GLib-GObject-CRITICAL **: 16:29:01.738: Attempting to thaw the notification queue for object GtkSettings[0x556fe107c220]; Property notification does not work during instance finalization.
+
+(nitrogen:1288303): GLib-GObject-CRITICAL **: 16:29:01.879: Attempting to freeze the notification queue for object GtkSettings[0x5605bf6af010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288303): GLib-GObject-CRITICAL **: 16:29:01.879: Attempting to thaw the notification queue for object GtkSettings[0x5605bf6af010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288334): GLib-GObject-CRITICAL **: 16:30:02.063: Attempting to freeze the notification queue for object GtkSettings[0x557ec4c34010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288334): GLib-GObject-CRITICAL **: 16:30:02.063: Attempting to thaw the notification queue for object GtkSettings[0x557ec4c34010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288336): GLib-GObject-CRITICAL **: 16:30:02.211: Attempting to freeze the notification queue for object GtkSettings[0x5621a8cd91d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288336): GLib-GObject-CRITICAL **: 16:30:02.211: Attempting to thaw the notification queue for object GtkSettings[0x5621a8cd91d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288364): GLib-GObject-CRITICAL **: 16:31:01.400: Attempting to freeze the notification queue for object GtkSettings[0x564d4378f1a0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288364): GLib-GObject-CRITICAL **: 16:31:01.400: Attempting to thaw the notification queue for object GtkSettings[0x564d4378f1a0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288366): GLib-GObject-CRITICAL **: 16:31:01.580: Attempting to freeze the notification queue for object GtkSettings[0x564f14c6f170]; Property notification does not work during instance finalization.
+
+(nitrogen:1288366): GLib-GObject-CRITICAL **: 16:31:01.580: Attempting to thaw the notification queue for object GtkSettings[0x564f14c6f170]; Property notification does not work during instance finalization.
+
+(nitrogen:1288382): GLib-GObject-CRITICAL **: 16:32:01.762: Attempting to freeze the notification queue for object GtkSettings[0x5609d408e0c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288382): GLib-GObject-CRITICAL **: 16:32:01.762: Attempting to thaw the notification queue for object GtkSettings[0x5609d408e0c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288384): GLib-GObject-CRITICAL **: 16:32:01.918: Attempting to freeze the notification queue for object GtkSettings[0x555bc1860060]; Property notification does not work during instance finalization.
+
+(nitrogen:1288384): GLib-GObject-CRITICAL **: 16:32:01.918: Attempting to thaw the notification queue for object GtkSettings[0x555bc1860060]; Property notification does not work during instance finalization.
+
+(nitrogen:1288396): GLib-GObject-CRITICAL **: 16:33:02.101: Attempting to freeze the notification queue for object GtkSettings[0x556248cca0a0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288396): GLib-GObject-CRITICAL **: 16:33:02.101: Attempting to thaw the notification queue for object GtkSettings[0x556248cca0a0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288398): GLib-GObject-CRITICAL **: 16:33:02.258: Attempting to freeze the notification queue for object GtkSettings[0x55fb99039040]; Property notification does not work during instance finalization.
+
+(nitrogen:1288398): GLib-GObject-CRITICAL **: 16:33:02.258: Attempting to thaw the notification queue for object GtkSettings[0x55fb99039040]; Property notification does not work during instance finalization.
+
+(nitrogen:1288433): GLib-GObject-CRITICAL **: 16:34:01.432: Attempting to freeze the notification queue for object GtkSettings[0x561e87b14ec0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288433): GLib-GObject-CRITICAL **: 16:34:01.432: Attempting to thaw the notification queue for object GtkSettings[0x561e87b14ec0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288435): GLib-GObject-CRITICAL **: 16:34:01.591: Attempting to freeze the notification queue for object GtkSettings[0x55fba8476240]; Property notification does not work during instance finalization.
+
+(nitrogen:1288435): GLib-GObject-CRITICAL **: 16:34:01.591: Attempting to thaw the notification queue for object GtkSettings[0x55fba8476240]; Property notification does not work during instance finalization.
+
+(nitrogen:1288445): GLib-GObject-CRITICAL **: 16:35:01.780: Attempting to freeze the notification queue for object GtkSettings[0x558170a1fec0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288445): GLib-GObject-CRITICAL **: 16:35:01.780: Attempting to thaw the notification queue for object GtkSettings[0x558170a1fec0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288447): GLib-GObject-CRITICAL **: 16:35:01.943: Attempting to freeze the notification queue for object GtkSettings[0x55dfdbf7ae00]; Property notification does not work during instance finalization.
+
+(nitrogen:1288447): GLib-GObject-CRITICAL **: 16:35:01.943: Attempting to thaw the notification queue for object GtkSettings[0x55dfdbf7ae00]; Property notification does not work during instance finalization.
+
+(nitrogen:1288457): GLib-GObject-CRITICAL **: 16:36:02.138: Attempting to freeze the notification queue for object GtkSettings[0x5572b262f150]; Property notification does not work during instance finalization.
+
+(nitrogen:1288457): GLib-GObject-CRITICAL **: 16:36:02.138: Attempting to thaw the notification queue for object GtkSettings[0x5572b262f150]; Property notification does not work during instance finalization.
+
+(nitrogen:1288459): GLib-GObject-CRITICAL **: 16:36:02.347: Attempting to freeze the notification queue for object GtkSettings[0x558237e61250]; Property notification does not work during instance finalization.
+
+(nitrogen:1288459): GLib-GObject-CRITICAL **: 16:36:02.348: Attempting to thaw the notification queue for object GtkSettings[0x558237e61250]; Property notification does not work during instance finalization.
+
+(nitrogen:1288475): GLib-GObject-CRITICAL **: 16:37:01.537: Attempting to freeze the notification queue for object GtkSettings[0x564cb6f3a000]; Property notification does not work during instance finalization.
+
+(nitrogen:1288475): GLib-GObject-CRITICAL **: 16:37:01.537: Attempting to thaw the notification queue for object GtkSettings[0x564cb6f3a000]; Property notification does not work during instance finalization.
+
+(nitrogen:1288477): GLib-GObject-CRITICAL **: 16:37:01.692: Attempting to freeze the notification queue for object GtkSettings[0x55f1f134c1d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288477): GLib-GObject-CRITICAL **: 16:37:01.692: Attempting to thaw the notification queue for object GtkSettings[0x55f1f134c1d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288487): GLib-GObject-CRITICAL **: 16:38:01.877: Attempting to freeze the notification queue for object GtkSettings[0x55b8a1b83110]; Property notification does not work during instance finalization.
+
+(nitrogen:1288487): GLib-GObject-CRITICAL **: 16:38:01.877: Attempting to thaw the notification queue for object GtkSettings[0x55b8a1b83110]; Property notification does not work during instance finalization.
+
+(nitrogen:1288489): GLib-GObject-CRITICAL **: 16:38:02.035: Attempting to freeze the notification queue for object GtkSettings[0x55e66d0911c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288489): GLib-GObject-CRITICAL **: 16:38:02.035: Attempting to thaw the notification queue for object GtkSettings[0x55e66d0911c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288530): GLib-GObject-CRITICAL **: 16:39:01.221: Attempting to freeze the notification queue for object GtkSettings[0x55cf8c2d2e70]; Property notification does not work during instance finalization.
+
+(nitrogen:1288530): GLib-GObject-CRITICAL **: 16:39:01.221: Attempting to thaw the notification queue for object GtkSettings[0x55cf8c2d2e70]; Property notification does not work during instance finalization.
+
+(nitrogen:1288532): GLib-GObject-CRITICAL **: 16:39:01.378: Attempting to freeze the notification queue for object GtkSettings[0x56010cf6bc80]; Property notification does not work during instance finalization.
+
+(nitrogen:1288532): GLib-GObject-CRITICAL **: 16:39:01.378: Attempting to thaw the notification queue for object GtkSettings[0x56010cf6bc80]; Property notification does not work during instance finalization.
+
+(nitrogen:1288547): GLib-GObject-CRITICAL **: 16:40:01.592: Attempting to freeze the notification queue for object GtkSettings[0x560639ca4200]; Property notification does not work during instance finalization.
+
+(nitrogen:1288547): GLib-GObject-CRITICAL **: 16:40:01.592: Attempting to thaw the notification queue for object GtkSettings[0x560639ca4200]; Property notification does not work during instance finalization.
+
+(nitrogen:1288549): GLib-GObject-CRITICAL **: 16:40:01.760: Attempting to freeze the notification queue for object GtkSettings[0x55eb77816070]; Property notification does not work during instance finalization.
+
+(nitrogen:1288549): GLib-GObject-CRITICAL **: 16:40:01.760: Attempting to thaw the notification queue for object GtkSettings[0x55eb77816070]; Property notification does not work during instance finalization.
+
+(nitrogen:1288590): GLib-GObject-CRITICAL **: 16:41:01.963: Attempting to freeze the notification queue for object GtkSettings[0x560259c68010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288590): GLib-GObject-CRITICAL **: 16:41:01.963: Attempting to thaw the notification queue for object GtkSettings[0x560259c68010]; Property notification does not work during instance finalization.
+
+(nitrogen:1288592): GLib-GObject-CRITICAL **: 16:41:02.113: Attempting to freeze the notification queue for object GtkSettings[0x55d2267c60d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288592): GLib-GObject-CRITICAL **: 16:41:02.114: Attempting to thaw the notification queue for object GtkSettings[0x55d2267c60d0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288634): GLib-GObject-CRITICAL **: 16:42:01.287: Attempting to freeze the notification queue for object GtkSettings[0x5642d2a971f0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288634): GLib-GObject-CRITICAL **: 16:42:01.287: Attempting to thaw the notification queue for object GtkSettings[0x5642d2a971f0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288636): GLib-GObject-CRITICAL **: 16:42:01.442: Attempting to freeze the notification queue for object GtkSettings[0x562d56f30070]; Property notification does not work during instance finalization.
+
+(nitrogen:1288636): GLib-GObject-CRITICAL **: 16:42:01.442: Attempting to thaw the notification queue for object GtkSettings[0x562d56f30070]; Property notification does not work during instance finalization.
+
+(nitrogen:1288725): GLib-GObject-CRITICAL **: 16:43:01.640: Attempting to freeze the notification queue for object GtkSettings[0x55817f69ffe0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288725): GLib-GObject-CRITICAL **: 16:43:01.640: Attempting to thaw the notification queue for object GtkSettings[0x55817f69ffe0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288727): GLib-GObject-CRITICAL **: 16:43:01.813: Attempting to freeze the notification queue for object GtkSettings[0x559429269460]; Property notification does not work during instance finalization.
+
+(nitrogen:1288727): GLib-GObject-CRITICAL **: 16:43:01.813: Attempting to thaw the notification queue for object GtkSettings[0x559429269460]; Property notification does not work during instance finalization.
+
+(nitrogen:1288772): GLib-GObject-CRITICAL **: 16:44:02.002: Attempting to freeze the notification queue for object GtkSettings[0x5566874d51c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288772): GLib-GObject-CRITICAL **: 16:44:02.002: Attempting to thaw the notification queue for object GtkSettings[0x5566874d51c0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288774): GLib-GObject-CRITICAL **: 16:44:02.157: Attempting to freeze the notification queue for object GtkSettings[0x558c2da990f0]; Property notification does not work during instance finalization.
+
+(nitrogen:1288774): GLib-GObject-CRITICAL **: 16:44:02.157: Attempting to thaw the notification queue for object GtkSettings[0x558c2da990f0]; Property notification does not work during instance finalization.

@@ -1,0 +1,93 @@
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+TRYING TO RUN NITROGEN COMMAND
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=0 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+RUNNING: /usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1
+return code: 0
+CompletedProcess(args='/usr/bin/nitrogen --set-zoom-fill --random ~/Imagens/Walpapers/11* --head=1 >> /home/pvsfair/dev/changedesktop/err.txt 2>&1', returncode=0)
+SUCCESSFULLY RAN NITROGEN COMMAND
+Dawn:    2024-01-02 07:21:54.232121+00:00
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Noon:    2024-01-02 12:33:57+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+Dusk:    2024-01-02 17:45:58.413557+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+17
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+17
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+17
+7.8838888888888885
+Sunrise: 2024-01-02 07:53:02.016339+00:00
+Sunset:  2024-01-02 17:14:50.552797+00:00
+
+17
+7.8838888888888885
