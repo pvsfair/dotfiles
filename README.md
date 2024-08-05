@@ -48,3 +48,9 @@ source ~/.bashrc
 - Either:
   - Restart current terminal window
   - Run `source ~/.bashrc`
+
+# TODO
+
+## installs to add:
+
+ - [ ] k9s
