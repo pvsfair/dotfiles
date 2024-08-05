@@ -93,6 +93,13 @@ if ! command -v python3 &> /dev/null; then
 fi
 echo "python3 version => $(python3 --version)"
 
+if ! command -v pip3 &> /dev/null; then
+  echo 'Installing pip3'
+  sudo apt update
+  sudo apt install python3-pip python3-setuptools -y
+fi
+echo "Instlaled pip"
+
 # installing fuck
 if ! command -v fuck &> /dev/null; then
   echo 'Installing fuck'
