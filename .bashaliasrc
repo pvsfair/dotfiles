@@ -34,7 +34,7 @@ function sbash(){
 }
 
 function ealias(){
-	editandsource ~/.bashaliasrc
+	editandsource $DOTFILES_PATH/.bashaliasrc
 }
 
 # Directory aliases
