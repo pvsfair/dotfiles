@@ -62,10 +62,10 @@ alias xc="xclip -selection clipboard"
 #	sh $1 | xclip -selection clipboard
 #}
 
-alias k9s="k9s-nsg"
-alias k9s-cluster-tools="k9s-nsg --kubeconfig ~/.kube/configThLiveToolsProd"
-alias k9s-eu-broker="k9s-nsg --kubeconfig ~/.kube/configeubrokermasterblaster"
-alias k9s-staging="k9s-nsg --kubeconfig ~/.kube/configstagmaster"
+#alias k9s="k9s-nsg"
+alias k9s-cluster-tools="k9s --kubeconfig ~/.kube/configThLiveToolsProd"
+alias k9s-eu-broker="k9s --kubeconfig ~/.kube/configeubrokermasterblaster"
+alias k9s-staging="k9s --kubeconfig ~/.kube/configstagmaster"
 
 alias watcher="ag -l | entr -rc"
 
