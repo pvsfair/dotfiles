@@ -10,7 +10,7 @@ function dalemarcio() {
   fi
 }
 
-function gpr-url() {
+function git-pr() {
   local branch remote host owner repo path url
 
   branch=$(git symbolic-ref --short HEAD) || return 1
