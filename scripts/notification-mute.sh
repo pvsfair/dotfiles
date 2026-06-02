@@ -15,7 +15,7 @@ state=$(gsettings get org.gnome.desktop.notifications show-banners)
 if [[ $state == 'true' ]]
 then
   notify-send "Notifications: disabled";
-  sleep 0.1;
+  sleep 0.3;
   gsettings set org.gnome.desktop.notifications show-banners false
 else
   gsettings set org.gnome.desktop.notifications show-banners true

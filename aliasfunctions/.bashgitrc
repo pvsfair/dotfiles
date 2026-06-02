@@ -1,0 +1,76 @@
+function dalemarcio() {
+  local output
+  output=$(git push 2>&1)
+  local exit_code=$?
+
+  echo "$output"
+
+  if [ $exit_code -eq 0 ]; then
+    gpr-url
+  fi
+}
+
+function gpr-url() {
+  local branch remote host owner repo path url
+
+  branch=$(git symbolic-ref --short HEAD) || return 1
+  remote=$(git config --get remote.origin.url) || return 1
+
+  # Shared parse: handles https://host/owner/repo(.git) and git@host:owner/repo(.git)
+  if [[ $remote =~ ^(https?|ssh)://[^/]+/(.+)/(.+?)(\.git)?$ ]]; then
+    host=$(sed -E 's#^[a-z]+://([^/]+)/.*#\1#' <<<"$remote")
+    owner="${BASH_REMATCH[2]}"; repo="${BASH_REMATCH[3]%.git}"
+  elif [[ $remote =~ ^.*@([^:]+):/*(.+)/(.+?)(\.git)?$ ]]; then
+    host="${BASH_REMATCH[1]}"; owner="${BASH_REMATCH[2]}"; repo="${BASH_REMATCH[3]%.git}"
+  else
+    echo "Unrecognized remote: $remote" >&2; return 1
+  fi
+
+  path="${owner}/${repo}"
+  # URL-encode the branch (handles feature/foo, etc.)
+  local from; from=$(_urlencode "$branch")
+
+  # Ask where the PR should target: default branch or a selected one
+  local dest to=""
+  dest=$(printf '%s\n' "$branch -> Default branch" "$branch -> Select branch" "Cancel" \
+    | fzf --prompt="Open PR: " --height=40%)
+  case "$dest" in
+    "$branch -> Select branch")
+      local target
+      target=$(git branch -r --format='%(refname:short)' \
+        | sed 's#^origin/##' | grep -vx "HEAD\|$branch" | sort -u \
+        | fzf --prompt="destination> " --height=40%)
+      [[ -z "$target" ]] && return 1
+      to=$(_urlencode "$target") ;;
+    "$branch -> Default branch") ;;
+    *) return 1 ;;
+  esac
+
+  case "$host" in
+    *github.com|*gitea*|*codeberg.org)
+      if [[ -n "$to" ]]; then url="https://${host}/${path}/compare/${to}...${from}?expand=1"
+      else url="https://${host}/${path}/compare/${from}?expand=1"; fi ;;
+    *gitlab.com)
+      url="https://${host}/${path}/-/merge_requests/new?merge_request%5Bsource_branch%5D=${from}"
+      [[ -n "$to" ]] && url+="&merge_request%5Btarget_branch%5D=${to}" ;;
+    *bitbucket.org)
+      url="https://${host}/${path}/pull-requests/new?source=${from}&t=1"
+      [[ -n "$to" ]] && url+="&dest=${to}" ;;
+    *) echo "Unknown host '$host' — remote: $remote" >&2; return 1 ;;
+  esac
+
+  echo "$url"
+  xdg-open "$url" 2>/dev/null || open "$url" 2>/dev/null
+}
+
+function _urlencode() {
+  local s="$1" out= c i
+  for (( i=0; i<${#s}; i++ )); do
+    c="${s:i:1}"
+    case "$c" in
+      [a-zA-Z0-9.~_-]) out+="$c" ;;
+      *) printf -v c '%%%02X' "'$c"; out+="$c" ;;
+    esac
+  done
+  printf '%s' "$out"
+}
