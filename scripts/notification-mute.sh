@@ -10,14 +10,14 @@
 #               Set the name, place the path to file, e.g. /home/<user>/Software/ubuntu-notification-shortcut and select the keyboard combination
 
 # Get the current state of the notificiation mode
-state=$(gsettings get org.gnome.desktop.notifications show-banners)
+state=$(dunstctl is-paused)
 
-if [[ $state == 'true' ]]
+if [[ $state == 'false' ]]
 then
   notify-send "Notifications: disabled";
   sleep 0.3;
-  gsettings set org.gnome.desktop.notifications show-banners false
+  dunstctl set-paused true
 else
-  gsettings set org.gnome.desktop.notifications show-banners true
-  notify-send "Notifications: enabled"
+  notify-send "Notifications: enabled";
+  dunstctl set-paused false
 fi
