@@ -1,0 +1,8 @@
+# export PATH=$PATH:/usr/local/go/bin
+
+# export PATH="$PATH:/home/pvsfair/.local/bin:/mnt/c/Users/pvsfa/AppData/Local/Programs/Microsoft VS Code/bin"
+
+export GENAI_FACTORY_API_KEY="sk-P0zIMOiyQCJe2Wpz67DvOQ"
+export DD_SITE=datadoghq.eu
+
+export HINDSIGHT_BANK_ID=dory

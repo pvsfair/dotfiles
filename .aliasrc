@@ -1,0 +1,205 @@
+function sourcefile(){
+	source $1
+	echo "sourced '$1' file"
+}
+function editandsource(){
+	nvim $1
+	sourcefile $1
+}
+alias esfile="editandsource"
+function cdeditandsource(){
+  DIRECTORY=$(pwd)
+  cd $1
+  nvim $1/$2
+  sourcefile $1/$2
+  cd $DIRECTORY
+}
+
+function nvimfolder(){
+  DIRECTORY=$(pwd)
+  cd $1
+  nvim
+  cd $DIRECTORY
+}
+
+# edits shortcuts
+
+function evim(){
+	nvim ~/.vimrc
+}
+function envim(){
+  nvimfolder ~/.config/nvim
+}
+function etmux(){
+  nvimfolder ~/.config/tmux
+}
+function ewezterm(){
+  nvimfolder ~/.config/wezterm
+}
+function erego(){
+  nvimfolder ~/.config/regolith3
+}
+function e.conf(){
+  nvimfolder ~/.config
+}
+function epiagent(){
+  nvimfolder ~/.pi/agent
+}
+function ekiro(){
+  nvimfolder ~/.kiro
+}
+function epi(){
+  nvimfolder ~/.pi
+}
+function ei3(){
+  nvim ~/.config/i3/config
+}
+function e1o1(){
+  nvimfolder ~/dev/1_1s
+}
+function eopencode(){
+  nvimfolder ~/.config/opencode
+}
+function enotes(){
+  nvimfolder ~/dev/notes
+}
+
+function sbash(){
+	sourcefile ~/.bashrc
+}
+
+function ealias(){
+	cdeditandsource $DOTFILES_PATH .bashaliasrc
+}
+function salias(){
+	sourcefile $DOTFILES_PATH/.bashaliasrc
+}
+
+source $DOTFILES_PATH/aliasfunctions/.bashgitrc
+
+if [ -f $DOTFILES_PATH/aliasfunctions/.extrafunctionsrc ]; then
+  source $DOTFILES_PATH/aliasfunctions/.extrafunctionsrc
+fi
+
+function compass-teleport(){
+  mongodb-compass --password-store="gnome-libsecret" --ignore-additional-command-line-flags mongodb://localhost:27017/%2A?directConnection=true&serverSelectionTimeoutMS=5000
+  tsh proxy db --tunnel --port 27017 --db-user role/teleport-write $1 --db-name "*"
+}
+function tlp-p-app(){
+  tsh proxy app $1 --port $2
+}
+function tlp-mgmt-open(){
+  local addr=$($DOTFILES_PATH/scripts/tsh-cache.sh mgmt --resolve "$1")
+  xdg-open "http://$addr"
+}
+declare -A _tsh_complete_map=(
+  [compass-teleport]=db
+  [tlp-p-app]=apps
+  [tlp-mgmt-open]=mgmt
+)
+_tsh_fzf_complete() {
+  if [[ $COMP_CWORD -eq 1 ]]; then
+    local resource="${_tsh_complete_map[${COMP_WORDS[0]}]}"
+    local apps
+    apps=$($DOTFILES_PATH/scripts/tsh-cache.sh "$resource")
+
+    if command -v fzf &>/dev/null; then
+      local selected
+      selected=$(echo "$apps" | fzf --prompt="${COMP_WORDS[0]}> " --query="${COMP_WORDS[COMP_CWORD]}")
+      if [[ -n "$selected" ]]; then
+        COMPREPLY=("$selected")
+      fi
+    else
+      COMPREPLY=($(compgen -W "$apps" -- "${COMP_WORDS[COMP_CWORD]}"))
+    fi
+  fi
+}
+complete -F _tsh_fzf_complete compass-teleport
+complete -F _tsh_fzf_complete tlp-p-app
+complete -F _tsh_fzf_complete tlp-mgmt-open
+
+alias forceTlpAppsRefresh="$DOTFILES_PATH/scripts/tsh-cache.sh apps -f"
+
+# Directory aliases
+alias ..="cd .."
+alias cd..="cd .."
+
+# Fuck aliases
+eval $(thefuck --alias)
+alias damn="fuck"
+alias shit="fuck"
+
+# docker compose alias
+alias dcu="docker compose up"
+alias dcub="docker compose up --build"
+alias dcs="docker compose stop"
+alias dcd="docker compose down"
+alias dcdf="docker compose down -v --remove-orphans"
+
+# mvn alias
+alias mvnquarkus="mvn clean quarkus:dev -P.env"
+alias mvnquarkusnoconsole="mvn clean quarkus:dev -P.env -Dquarkus.console.enabled='false'"
+alias mvnquarkusnoconsolenotclean="mvn quarkus:dev -P.env -Dquarkus.console.enabled='false'"
+
+# xclip alias (clipboard)
+alias xc="xclip -selection clipboard"
+
+# dunst refresh
+alias dreset="killall dunst && notify-send test"
+# did not work as expected
+#function xc(){
+#	sh $1 | xclip -selection clipboard
+#}
+
+#alias k9s="k9s-nsg"
+alias k9s-cluster-tools="k9s --kubeconfig ~/.kube/configThLiveToolsProd"
+alias k9s-eu-broker="k9s --kubeconfig ~/.kube/configeubrokermasterblaster"
+alias k9s-staging="k9s --kubeconfig ~/.kube/configstagmaster"
+alias k9s-demo="k9s --kubeconfig ~/.kube/configdemo"
+alias k9s-staging-gi="k9s --kubeconfig ~/.kube/configstagmastergi"
+alias k9s-gmklocal="k9s --kubeconfig ~/.kube/configgmklocal"
+
+alias export-idp-de="export KUBECONFIG=~/.kube/teleport-kubeconfig-de.yaml"
+alias export-idp-sg="export KUBECONFIG=~/.kube/teleport-kubeconfig-sg.yaml"
+
+alias k9s-idp-de="KUBECONFIG=~/.kube/teleport-kubeconfig-de.yaml k9s"
+alias k9s-idp-sg="KUBECONFIG=~/.kube/teleport-kubeconfig-sg.yaml k9s"
+# alias k9s-idp-de-dev="KUBECONFIG=~/.kube/teleport-kubeconfig.yaml k9s"
+# alias k9s-idp-de-preprod="KUBECONFIG=~/.kube/teleport-kubeconfig-preprod.yaml k9s"
+# alias k9s-idp-de-prod="KUBECONFIG=~/.kube/teleport-kubeconfig-prod.yaml k9s"
+alias ktlp="KUBECONFIG=~/.kube/teleport-kubeconfig.yaml kubectl"
+alias ktlppre="KUBECONFIG=~/.kube/teleport-kubeconfig-preprod.yaml kubectl"
+alias ktlpprod="KUBECONFIG=~/.kube/teleport-kubeconfig-prod.yaml kubectl"
+alias kstg="KUBECONFIG=~/.kube/configstagmaster kubectl"
+
+alias watcher="ag -l | entr -rc"
+
+alias upbg="python3 /home/pvsfair/dev/changedesktop/changeDesktopDay.py"
+
+alias lg="lazygit"
+alias monitorDualLeft="xrandr --output HDMI1 --auto --left-of eDP1"
+alias monitorSingle="xrandr --auto"
+
+alias howlongivebeenawake="uptime | awk -F'( |,|:)+' '{print \$6,\$7\",\",\$8,\"hours,\",\$9,\"minutes.\"}'"
+
+alias lgb="lazygit -p ~/bolttech/bgs-domain-collections"
+
+alias deb-install-from-folder="$DOTFILES_PATH/scripts/auto-deb-update.sh"
+
+alias toggle_tablet_monitor="$DOTFILES_PATH/scripts/toggle_tablet_monitor.sh"
+
+alias cpprog="rsync -avh --info=progress2"
+
+# gnome-randr
+# alias gnome-randr="/home/pauloalvares/dev/dotfiles/scripts/gnome-randr.py"
+
+# Toggle ON: Spawns a 1920x1080 virtual screen instantly
+# alias tablet-on="gdbus call --session --dest org.gnome.Mutter.DisplayConfig --object-path /org/gnome/Mutter/DisplayConfig --method org.gnome.Mutter.DisplayConfig.CreateVirtualMonitor 'tablet_monitor' 1920 1080 60.0"
+
+# Toggle OFF: Instantly destroys it
+# alias tablet-off="gdbus call --session --dest org.gnome.Mutter.DisplayConfig --object-path /org/gnome/Mutter/DisplayConfig --method org.gnome.Mutter.DisplayConfig.DestroyVirtualMonitor 'tablet_monitor'"
+
+# Alternativa limpa caso o de cima falhe:
+alias tablet-on="gsettings set org.gnome.desktop.remote-desktop.rdp screen-share-mode extend"
+alias tablet-off="gsettings set org.gnome.desktop.remote-desktop.rdp screen-share-mode mirror"
+

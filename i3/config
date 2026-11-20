@@ -294,7 +294,7 @@ bindsym $mod+period exec --no-startup-id rofimoji
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id blueman-applet 
 exec --no-startup-id blueman-tray
-exec --no-startup-id compton
+# exec --no-startup-id compton
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11,gpg
 
 # Start Applications on Weekdays

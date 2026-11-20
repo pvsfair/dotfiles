@@ -1,0 +1,12 @@
+if [ -f $DOTFILES_PATH/.aliasrc ]; then
+  . $DOTFILES_PATH/.aliasrc
+fi
+
+function ealias(){
+	cdeditandsource $DOTFILES_PATH .zshaliasrc
+}
+
+function ebash(){
+	cdeditandsource $DOTFILES_PATH .zshrc
+}
+

@@ -1,0 +1,6 @@
+function urldecode() {
+  : "${*//+/ }"
+  echo -e "${_//%/\\x}"
+  echo -n -e "${_//%/\\x}" | xclip -sel clip && echo "Output copied into clipboard"
+}
+
